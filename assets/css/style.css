@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.navbar {
+    background-color: #dbdbdb;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+.nav-left .logo {
+    width: 40px;
+}
+.nav-left ul {
+    display: flex;
+}
+.nav-left ul li {
+    list-style-type: none;
+    margin-right: 30px;
+}
+.nav-left ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-left ul li a:hover {
+    color: blue;
+}
+.nav-right {
+    padding-right: 50px;
+}
+.nav-right ul li {
+    list-style-type: none;
+}
+.nav-right ul li a {
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 15px;
+}
+.nav-right ul li a:hover {
+    background-color: black;
+}
+.content {
+    display: flex;
+    margin: 50px auto;
+    width: 900px;
+    padding: 40px;
+    box-shadow: 0px 10px 20px grey;
+    border-radius: 10px;
+}
+.container{
+    margin-right: 40px;
+}
+.container .description{
+    text-align: justify;
+}
+.description a{
+    color: red;
+}
+.description a:hover{
+    color: blue;
+}
+.download-btn{
+    margin-top: 20px;
+}
+.container .contact-btn{
+    background-color: black;
+    padding: 5px 15px;
+    margin-right: 20px;
+    color: white;
+    border-radius: 15px;
+    font-size: 15px;
+    text-decoration: none;
+}
+.container .contact-btn:hover{
+    background-color: blue;
+}
+.container .cv {
+    color: black;
+    text-decoration: none;
+}
+.container .cv:hover{
+    color: blue;
+}
+.container .socmed {
+    margin-top: 30px;
+}
+.socmed a i{
+    font-size: 20px;
+    margin-right: 20px;
+    color: black;
+}
+.socmed a i:hover{
+    color: blue;
+}
+.photo-desc{
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 5px 10px grey;
+    border-radius: 10px;
+}
+.photo-desc img{
+    width: 300px;
+    border-radius: 10px 10px 0 0;
+}
+.photo-desc h3{
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+.photo-desc p{
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+.contact-form{
+    width: 500px;
+    margin: 30px auto;
+}
+.contact-form h2{
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-form form input, select, textarea{
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 3px 5px #dbdbdb;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #dbdbdb;
+}
+.contact-form form textarea{
+    resize: none;
+    height: 100px;
+}
+.contact-form form button{
+    width: 80px;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin: auto 0px auto auto;
+    border: 0px;
+}
+.contact-form form button:hover{
+    background-color: blue;
+}
