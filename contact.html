@@ -21,7 +21,7 @@
         </nav>
         <div class="contact-form">
             <h2 class="contact-title">GET IN TOUCH</h2>
-            <form action="">
+            <form>
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name"/>
                 <label for="email">Email</label>
@@ -30,15 +30,16 @@
                 <input type="text" name="phone" id="phone"/>
                 <label for="subject">Subject</label>
                 <select name="subject" id="subject">
-                    <option value="mathematics">Mathematics</option>
-                    <option value="physics">Physics</option>
-                    <option value="chemistry">Chemistry</option>
-                    <option value="biology">Biology</option>
+                    <option value="Frontend Developer">Frontend Developer</option>
+                    <option value="Backend Developer">Backend Developer</option>
+                    <option value="Fullstack Developer">Fullstack Developer</option>
+                    <option value="Dev-ops Engineer">Dev-ops Engineer</option>
                 </select>
                 <label for="message">Your Message</label>
                 <textarea name="message" id="message"></textarea>
-                <button type="submit">Submit</button>
+                <button onclick="getData()" type="button">Submit</button>
             </form>
         </div>
+        <script src="./assets/js/script.js"></script>
     </body>
 </html>
