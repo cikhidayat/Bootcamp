@@ -1,4 +1,4 @@
-body {
+body{
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -159,4 +159,182 @@ body {
 }
 .contact-form form button:hover{
     background-color: blue;
+}
+.project-form{
+    width: 500px;
+    margin: 30px auto;
+}
+.section-title{
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+.project-form form{
+    display: flex;
+    flex-direction: column;
+}
+.project-form form input, select, textarea{
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 3px 5px #dbdbdb;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #dbdbdb;
+    width: 100%;
+}
+.project-form form label{
+    margin-bottom: 5px;
+}
+.project-form form textarea{
+    resize: none;
+    height: 200px;
+}
+.project-form form .startend-date{
+    display: flex;
+}
+.project-form form .start-date-container{
+    width: 50%;
+    padding-right: 10px;
+}
+.project-form form .end-date-container{
+    width: 50%;
+}
+.project-form form .tech-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.project-form form .tech-container label{
+    color: darkslategray;
+}
+.project-form form div.tech-container div{
+    display: flex;
+    width: 100%;
+}
+.project-form form .tech-container input#html, input#css, input#javascript, input#php{
+    width: 20px;
+}
+.project-form form div.tech-container label{
+    margin-left: 10px;
+}
+.project-form form button{
+    width: 80px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: auto 0px auto auto;
+    border: 0px;
+}
+.project-form form button:hover{
+    background-color: blue;
+}
+.project{
+    background-color: #eeeeee;
+}
+.project-blog{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1130px;
+    margin: 10px auto;
+}
+.project-post{
+    margin: 20px;
+    width: 300px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 20px 20px #dbdbdb;
+    border-radius: 10px;
+}
+.project-post a{
+    text-decoration: none;
+    color: black;
+}
+.project-post a:hover{
+    color: blue;
+}
+.project-post img{
+    width: inherit;
+    border-radius: 10px;
+}
+.project-post .project-title{
+    margin: 10px 0 5px 0;
+}
+.project-post .project-duration{
+    margin: 0;
+    display: inline-block;
+}
+.project-post label, .project-duration{
+    color: dimgray;
+}
+.project-post .project-tech i{
+    font-size: 28px;
+    margin: 5px;
+    margin-top: 10px;
+}
+.project-post .action-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.project-post .action-btn input{
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    border-style: none;
+    padding: 5px 10px;
+    width: 49%;
+    font-size: 14px;
+    font-weight: bold;
+}
+.project-post .action-btn input:hover{
+    background-color: blue;
+}
+.blog-content{
+    padding: 30px;
+    width: 1200px;
+    margin: 10px auto;
+}
+.blog-title{
+    text-align: center;
+    font-size: 40px;
+}
+.blog-head{
+    width: inherit;
+    display: flex;
+    margin: 50px 0;
+}
+.blog-head .blog-img{
+    width: 55%;
+}
+.blog-head .blog-img img{
+    width: 100%;
+}
+.blog-details{
+    margin-left: 40px;
+}
+.text-details{
+    color: grey;
+}
+.blog-details .title-details{
+    font-size: 25px;
+    margin: 0;
+}
+.blog-details .date-details p{
+    font-size: 25px;
+}
+.blog-details .tech-details{
+    margin-top: 50px;
+}
+.blog-details .tech-details .tech-icons{
+    font-size: 25px;
+    width: 100%;
+}
+.blog-details .tech-details .tech-icons td{
+    padding-top: 20px;
+}
+.blog-desc{
+    text-align: justify;
 }
