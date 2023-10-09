@@ -1,8 +1,9 @@
 <html>
     <head>
-        <title>Day 4 - Making Blog</title>
+        <title>Day 6 - Responsive Web</title>
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <nav class="navbar">
@@ -17,8 +18,16 @@
                 <ul>
                     <li><a href="contact.html">Contact Me</a></li>
                 </ul>
+                <button id="menu-bar" onclick="triggerButton()"><i class="fa-solid fa-bars"></i></button>
             </div>
         </nav>
+        <div id="menu-bar-container" class="menu-bar-container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="blog.html">My Project</a></li>
+            </ul>
+        </div>
         <div class="content">
             <div class="container">
                 <h2>Hai, Selamat Datang di Website ku</h2>
@@ -41,5 +50,6 @@
             </div>
         </div>
         <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/button.js"></script>
     </body>
 </html>
