@@ -1,6 +1,7 @@
 <html>
     <head>
-        <title>Contact Me</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day 7 - HOF and Callback</title>
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     </head>
@@ -29,28 +30,22 @@
                 <li><a href="testimonial.html">Testimonial</a></li>
             </ul>
         </div>
-        <div class="contact-form">
-            <h2 class="contact-title">GET IN TOUCH</h2>
-            <form>
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name"/>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-                <label for="phone">Phone Number</label>
-                <input type="text" name="phone" id="phone"/>
-                <label for="subject">Subject</label>
-                <select name="subject" id="subject">
-                    <option value="Frontend Developer">Frontend Developer</option>
-                    <option value="Backend Developer">Backend Developer</option>
-                    <option value="Fullstack Developer">Fullstack Developer</option>
-                    <option value="Dev-ops Engineer">Dev-ops Engineer</option>
-                </select>
-                <label for="message">Your Message</label>
-                <textarea name="message" id="message"></textarea>
-                <button onclick="getData()" type="button">Submit</button>
-            </form>
+        <div class="test-container">
+            <h2 class="test-title">TESTIMONIAL</h2>
+            <p class="test-desc">Rating Your Worker</p>
+            <div class="test-btn-container">
+                <button onclick="showTest()">All</button>
+                <button onclick="filterData(1)">1 <i class="fa-solid fa-star"></i></button>
+                <button onclick="filterData(2)">2 <i class="fa-solid fa-star"></i></button>
+                <button onclick="filterData(3)">3 <i class="fa-solid fa-star"></i></button>
+                <button onclick="filterData(4)">4 <i class="fa-solid fa-star"></i></button>
+                <button onclick="filterData(5)">5 <i class="fa-solid fa-star"></i></button>
+            </div>
+            <div id="test-content" class="test-content">
+                <!-- test content -->
+            </div>
         </div>
-        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/testimonial.js"></script>
         <script src="./assets/js/button.js"></script>
     </body>
 </html>
