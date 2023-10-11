@@ -3,10 +3,10 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 @media only screen and (max-width: 1150px){
-    .project-blog{
+    .project-blog, .test-content{
         width: 100% !important;
     }
-    .project-post{
+    .project-post, .test-post{
         width: 270px !important;
     }
 }
@@ -14,7 +14,7 @@ body{
     .content{
         margin: 50px !important;
     }
-    .project-post{
+    .project-post, .test-post{
         width: 230px !important;
     }
     .blog-content{
@@ -35,7 +35,7 @@ body{
     .content{
         font-size: 90%;
     }
-    .project-post{
+    .project-post, .test-post{
         width: 200px !important;
         font-size: 90%;
     }
@@ -53,7 +53,7 @@ body{
     .container{
         margin-right: 30px !important;
     }
-    .project-post{
+    .project-post, .test-post{
         width: 290px !important;
         font-size: 100%;
     }
@@ -71,6 +71,9 @@ body{
     }
     .title-details{
         font-size: 18px !important;
+    }
+    .test-btn-container{
+        width: 100% !important;
     }
 }
 @media only screen and (max-width: 750px){
@@ -93,7 +96,7 @@ body{
     .photo-desc img{
         width: 300px !important;
     }
-    .project-post{
+    .project-post, .test-post{
         width: 240px !important;
         font-size: 100%;
     }
@@ -108,7 +111,7 @@ body{
     #menu-bar{
         display: block !important;
     }
-    .project-post{
+    .project-post, .test-post{
         width: 100% !important;
         font-size: 100%;
     }
@@ -152,6 +155,9 @@ body{
     }
     .project-form form{
         margin: 0 20px;
+    }
+    .test-btn-container button{
+        font-size: 12px !important;
     }
 }
 #menu-bar{
@@ -575,7 +581,7 @@ body{
 .test-btn-container{
     display: flex;
     justify-content: space-around;
-    width: 800px;
+    width: 850px;
     margin: 0 auto;
 }
 .test-btn-container button{
