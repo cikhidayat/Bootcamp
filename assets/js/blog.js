@@ -73,21 +73,22 @@ function renderBlog(){
 
     for(let i = 0; i<data.length; i++){
         document.getElementById("project-blog").innerHTML +=
-        `<div class="project-post">
-            <img src="${data[i].image}" alt=""/>
-            <a href="blog-page.html" target="_blank"><h3 class="project-title">${data[i].projectName}</h3></a>
-            <label for="project-duration">Duration: </label>
-            <p class="project-duration"> ${data[i].monthDuration} Month</p>
-            <p class="project-desc">${data[i].description}</p>
+        `<div class="card m-3 p-2" style="width: 18rem;">
+            <img src="${data[i].image}" class="card-img-top" alt="Project1">
+            <div class="card-body">
+            <a class="link-offset-2 link-underline link-underline-opacity-0" href="blog-page.html"><h5 class="card-title">${data[i].projectName}</h5></a>
+            <p>Duration: <span>${data[i].monthDuration} Month</span></p>
+            <p class="card-text">${data[i].description}</p>
             <p class="project-tech">
                 ${data[i].technologiesHtml}
                 ${data[i].technologiesCss}
                 ${data[i].technologiesJavascript}
                 ${data[i].technologiesPhp}
             </p>
-            <div class="action-btn">
-                <input type="button" value="Edit">
-                <input type="button" value="Delete">
+            <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-primary px-4 py-1 me-2 flex-fill">Edit</a>
+                <a href="#" class="btn btn-primary px-4 py-1 flex-fill">Delete</a>
+            </div>
             </div>
         </div>`
     }
