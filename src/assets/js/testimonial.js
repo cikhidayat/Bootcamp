@@ -41,14 +41,15 @@ function showTest(){
     let testContent = ""
 
     dataTest.forEach(data => {
-        testContent += `
-        <div class="test-post">
-            <img src="${data.image}" alt="Testimonial img">
-            <p class="test-comment">"${data.comment}"</p>
-            <p class="test-name">- ${data.name}</p>
-            <p id="test-star" class="test-star">${data.star} <i class="fa-solid fa-star"></i></p>
-        </div>
-        `
+        testContent += 
+        `<div class="card m-3 p-2" style="width: 20rem;">
+            <img src="${data.image}" class="card-img-top" alt="testimonial">
+            <div class="card-body pb-0">
+                <p class="card-text fst-italic">"${data.comment}"</p>
+                <p class="text-end">- ${data.name}</p>
+                <p class="text-end">${data.star} <i class="fa-solid fa-star"></i></p>
+            </div>
+        </div>`
     })
     document.getElementById("test-content").innerHTML = testContent
 }
