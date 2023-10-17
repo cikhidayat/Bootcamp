@@ -48,12 +48,13 @@ function blogPage(req, res) {
 
   res.render('blog-page', { data })
 }
-function formblog(req, res) {
-  res.render('add-blog')
-}
 
+
+function formblog(req, res) {
+  res.render('addblog')
+}
 function addblog(req, res) {
-  const { title, content } = req.body
+  const { title, description } = req.body
   console.log(title);
-  console.log(content);
+  console.log(description);
 }
