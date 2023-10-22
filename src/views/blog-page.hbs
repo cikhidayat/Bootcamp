@@ -9,7 +9,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="./assets/images/logo.png" alt="cikhidayat" width="50">
+                    <img src="/images/logo.png" alt="cikhidayat" width="50">
                 </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,7 @@
                     <a class="nav-link link-opacity-10-hover" aria-current="page" href="/">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link link-opacity-10-hover" href="/blog">Add Blog</a>
+                    <a class="nav-link link-opacity-10-hover" href="/add-blog">Add Blog</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link link-opacity-10-hover" href="/contact">Contact Me</a>
@@ -39,18 +39,18 @@
             </div>
         </nav>
         <div class="container my-5" style="max-width: 800px;">
-            <h3 class="my-4 text-center">{{data.title}} | {{data.id}}</h3>
+            <h3 class="my-4 text-center">{{blog.title}} | {{blog.id}}</h3>
             <div class="d-flex flex-column">
                 <div class="d-flex justify-content-between border rounded my-3 p-2">
                     <div class="d-flex flex-md-row align-items-center">
-                        <p class="m-0 mx-2"><i class="fa-regular fa-calendar"></i><span class="text-details"> 10 February 2023 - 15 March 2023</span></p>
-                        <p class="m-0 mx-2"><i class="fa-regular fa-clock"></i><span class="text-details"> 1 month</span></p>
+                        <p class="m-0 mx-2"><i class="fa-regular fa-calendar"></i><span class="text-details"> {{blog.startDate}} - {{blog.endDate}}</span></p>
+                        <p class="m-0 mx-2"><i class="fa-regular fa-clock"></i><span class="text-details"> {{blog.duration}} month</span></p>
                     </div>
                     <div class="d-flex flex-md-row justify-content-around align-items-center">
-                        <p class="fs-5 m-0 mx-2"><i class="fa-brands fa-js"></i></p>
-                        <p class="fs-5 m-0 mx-2"><i class="fa-brands fa-php"></i></p>
-                        <p class="fs-5 m-0 mx-2"><i class="fa-brands fa-css3-alt"></i></p>
-                        <p class="fs-5 m-0 mx-2"><i class="fa-brands fa-html5"></i></p>
+                        <p class="fs-5 m-0 mx-2"><i class="{{blog.javascript}}"></i></p>
+                        <p class="fs-5 m-0 mx-2"><i class="{{blog.php}}"></i></p>
+                        <p class="fs-5 m-0 mx-2"><i class="{{blog.css}}"></i></p>
+                        <p class="fs-5 m-0 mx-2"><i class="{{blog.html}}"></i></p>
                     </div>
                 </div>
                 <div class="my-3">
@@ -59,7 +59,7 @@
             </div>
             <div style="text-align: justify;">
                 <p>
-                    {{data.content}}
+                    {{blog.description}}
                 </p>
             </div>
         </div>
