@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>My Blog</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="/images/logo.png" alt="cikhidayat" width="50">
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link link-opacity-10-hover" aria-current="page" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link-opacity-10-hover active" href="/add-blog">Add Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link-opacity-10-hover" href="/contact">Contact Me</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link-opacity-10-hover" href="/testimonial">Testimonial</a>
+                  </li>
+                </ul>
+                <div class="d-flex m-0" role="search">
+                    <a class="me-4 fs-5 text-secondary " href="https://instagram.com/rhmthidayat07"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="me-4 fs-5 text-secondary " href="https://www.facebook.com/rahmathidayat674"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="me-4 fs-5 text-secondary " href="https://www.linkedin.com/in/rhidayat1407/"><i class="fa-brands fa-linkedin-in"></i></i></a>
+                    <a class="me-4 fs-5 text-secondary " href="https://twitter.com/rhmthidayat07"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        <div class="d-flex flex-column mx-auto" style="max-width: 800px;">
+            <h3 class="mt-4 text-center">ADD MY PROJECT</h3>
+            <form 
+            method="post"
+            action="/add-blog"
+            class="p-4">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Project Name</label>
+                    <input type="text" class="form-control" name="title" id="title">
+                </div>
+                <div class="d-flex">
+                    <div class="container p-0 mb-3 pe-2">
+                        <label for="startDate" class="form-label">Start Date</label>
+                        <input type="date" class="form-control" name="startDate" id="startDate">
+                    </div>  
+                    <div class="container p-0 mb-3">
+                        <label for="endDate" class="form-label">End Date</label>
+                        <input type="date" class="form-control" name="endDate" id="endDate"/>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" name="description" id="description" style="resize: none; height: 200px;"></textarea>
+                </div>
+                <div class="d-flex">
+                    <div class="input-group mb-3">
+                        <div class="input-group-text">
+                            <input class="form-check-input mt-0" type="checkbox" name="html" id="html">
+                            <label for="html" class="form-label m-0 ms-2">HTML</label>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-text">
+                            <input class="form-check-input mt-0" type="checkbox" name="css" id="css">
+                            <label for="css" class="form-label m-0 ms-2">CSS</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="input-group mb-3">
+                        <div class="input-group-text">
+                            <input class="form-check-input mt-0" type="checkbox" name="javascript" id="javascript">
+                            <label for="javascript" class="form-label m-0 ms-2">Javascript</label>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-text">
+                            <input class="form-check-input mt-0" type="checkbox" name="php" id="php">
+                            <label for="php" class="form-label m-0 ms-2">PHP</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="imageblog" class="form-label">Upload Image</label>
+                    <input type="file" class="form-control" id="imageblog" name="imageblog">
+                </div>
+                <button class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div>
+            <footer class="border bg-dark m-0 p-3">
+              <p class="text-light m-0 text-center">Copyright 2023</p>
+              <p class="text-light m-0 text-center">Created by Rahmat Hidayat</p>
+            </footer>
+        </div>
+        <script src="/js/blog.js"></script>
+        <script src="/js/button.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>

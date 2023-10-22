@@ -20,7 +20,7 @@
                     <a class="nav-link link-opacity-10-hover" aria-current="page" href="/">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link link-opacity-10-hover" href="/blog">Add Blog</a>
+                    <a class="nav-link link-opacity-10-hover active" href="/add-blog">Add Blog</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link link-opacity-10-hover" href="/contact">Contact Me</a>
@@ -39,28 +39,28 @@
             </div>
           </nav>
         <div class="d-flex flex-column mx-auto" style="max-width: 800px;">
-            <h3 class="mt-4 text-center">ADD MY PROJECT</h3>
+            <h3 class="mt-4 text-center">EDIT PROJECT</h3>
             <form 
             method="post"
-            action="/addblog"
+            action="/update-blog/{{blog.id}}"
             class="p-4">
                 <div class="mb-3">
                     <label for="title" class="form-label">Project Name</label>
-                    <input type="text" class="form-control" name="title" id="title">
+                    <input type="text" class="form-control" name="title" id="title" value="{{blog.title}}">
                 </div>
                 <div class="d-flex">
                     <div class="container p-0 mb-3 pe-2">
-                        <label for="start-date" class="form-label">Start Date</label>
-                        <input type="date" class="form-control" name="start-date" id="start-date">
+                        <label for="startDate" class="form-label">Start Date</label>
+                        <input type="date" class="form-control" name="startDate" id="startDate" value="{{blog.startDate}}">
                     </div>  
                     <div class="container p-0 mb-3">
-                        <label for="end-date" class="form-label">End Date</label>
-                        <input type="date" class="form-control" name="end-date" id="end-date"/>
+                        <label for="endDate" class="form-label">End Date</label>
+                        <input type="date" class="form-control" name="endDate" id="endDate" value="{{blog.endDate}}">
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" name="description" id="description" style="resize: none; height: 200px;"></textarea>
+                    <textarea class="form-control" name="description" id="description" style="resize: none; height: 200px;">{{blog.description}}</textarea>
                 </div>
                 <div class="d-flex">
                     <div class="input-group mb-3">
@@ -91,8 +91,8 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="image-blog" class="form-label">Upload Image</label>
-                    <input type="file" class="form-control" id="image-blog">
+                    <label for="imageblog" class="form-label">Upload Image</label>
+                    <input type="file" class="form-control" id="imageblog" name="imageblog" value="{{blog.image}}">
                 </div>
                 <button class="btn btn-primary">Submit</button>
             </form>
