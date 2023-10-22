@@ -1,5 +1,6 @@
 const express = require('express')
 const path = require('path')
+const data = require('./src/mocks/blogs.json')
 const app = express()
 const PORT = 5000
 
@@ -10,20 +11,21 @@ app.use(express.static('src/assets'))
 
 app.use(express.urlencoded({ extended: false }))
 
+//routing
 app.get('/', home)
 app.get('/testimonial', testimonial)
 app.get('/contact', contact)
-app.get('/blog', blog)
 app.get('/blog-page/:id', blogPage) //url params
-app.get('/addblog', formblog)
-app.post('/addblog', addblog)
+app.get('/delete-blog/:id', deleteBlog)
+app.get('/add-blog', formBlog)
+app.post('/add-blog', addBlog)
 
 app.listen(PORT, () => {
   console.log("Server running on port 5000");
 })
 
 function home(req, res) {
-  res.render('index')
+  res.render('index', {data})
 }
 function testimonial(req, res) {
   res.render('testimonial')
@@ -31,12 +33,7 @@ function testimonial(req, res) {
 function contact(req, res) {
   res.render('contact')
 }
-function blog(req, res) {
-  res.render('blog')
-}
-function blogPage(req, res) {
-  res.render('blogPage')
-}
+
 function blogPage(req, res) {
   const { id } = req.params
 
@@ -49,12 +46,61 @@ function blogPage(req, res) {
   res.render('blog-page', { data })
 }
 
-
-function formblog(req, res) {
-  res.render('addblog')
+function formBlog(req, res) {
+  res.render('add-blog')
 }
-function addblog(req, res) {
-  const { title, description } = req.body
-  console.log(title);
-  console.log(description);
+
+function addBlog(req, res) {
+  let { title, startdate, enddate, description, html, css, javascript, php, imageblog } = req.body
+
+  // Month Duration
+  let startYear = Number(startdate.slice(0, 4))
+  let endYear = Number(enddate.slice(0, 4))
+  let startMonth = Number(startdate.slice(5, 7))
+  let endMonth = Number(enddate.slice(5, 7))
+  let yearMonthCv = (endYear-startYear) * 12
+  let monthDuration = (endMonth - startMonth) + yearMonthCv
+
+  // Technologies
+    if (html === 'on') {
+      html = "html5"
+    } else {
+        html = ""
+    };
+    if (css === 'on'){
+        css = "css3"
+    } else {
+        css = ""
+    };
+    if (javascript === 'on'){
+        javascript = "js"
+    } else {
+        javascript = ""
+    };
+    if (php === 'on'){
+        php = "php"
+    } else {
+        php = ""
+    };
+
+  let items = {
+    title,
+    monthDuration,
+    description,
+    html,
+    css,
+    javascript,
+    php,
+    imageblog
+  }
+
+  data.unshift(items)
+  res.redirect('/')
+}
+
+function deleteBlog(req, res) {
+  const { id } = req.params
+
+  data.splice(id, 1)
+  res.redirect('/')
 }
