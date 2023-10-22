@@ -1,0 +1,32 @@
+[
+    {
+      "title" : "React Project for Web Application",
+      "monthDuration" : 4,
+      "html" : "html5",
+      "css" : "",
+      "javascript" : "js",
+      "php" : "php",
+      "imageblog" : "project1.jpg",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "title" : "Fullstack Developer of Dumbways",
+      "monthDuration" : 10,
+      "html" : "",
+      "css" : "css3",
+      "javascript" : "js",
+      "php" : "php",
+      "imageblog" : "project1.jpg",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "title" : "Hacker Anonymous in Indonesia",
+      "monthDuration" : 4,
+      "html" : "html5",
+      "css" : "",
+      "javascript" : "js",
+      "php" : "" ,
+      "imageblog" : "project1.jpg",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
+  ]
