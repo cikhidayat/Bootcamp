@@ -1,0 +1,596 @@
+body{
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+@media only screen and (max-width: 1150px){
+    .project-blog, .test-content{
+        width: 100% !important;
+    }
+    .project-post, .test-post{
+        width: 270px !important;
+    }
+}
+@media only screen and (max-width: 1050px){
+    .content{
+        margin: 50px !important;
+    }
+    .project-post, .test-post{
+        width: 230px !important;
+    }
+    .blog-content{
+        font-size: 90% !important;
+        width: 100% !important;
+    }
+    .date-details p{
+        font-size: 18px !important;
+    }
+    .tech-icons{
+        font-size: 18px !important;
+    }
+    .title-details{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 920px){
+    .content{
+        font-size: 90%;
+    }
+    .project-post, .test-post{
+        width: 200px !important;
+        font-size: 90%;
+    }
+}
+@media only screen and (max-width: 850px){
+    .photo-desc{
+        height: 350px !important;
+    }
+    .photo-desc img{
+        width: 250px !important;
+    }
+    .content{
+        font-size: 85%;
+    }
+    .container{
+        margin-right: 30px !important;
+    }
+    .project-post, .test-post{
+        width: 290px !important;
+        font-size: 100%;
+    }
+    .blog-content{
+        font-size: 90% !important;
+        width: 100% !important;
+    }
+    .date-details p{
+        font-size: 14px !important;
+        margin: 10px 0;
+    }
+    .tech-icons tbody tr td{
+        font-size: 14px !important;
+        padding-top: 10px !important;
+    }
+    .title-details{
+        font-size: 18px !important;
+    }
+    .test-btn-container{
+        width: 100% !important;
+    }
+}
+@media only screen and (max-width: 750px){
+    .content{
+        display: flex;
+        flex-direction: column;
+        font-size: 90%;
+    }
+    .container{
+        margin-right: 0 !important;
+    }
+    .socmed{
+        display: flex;
+        justify-content: center;
+    }
+    .photo-desc{
+        height: 400px !important;
+        margin: 20px auto 10px;
+    }
+    .photo-desc img{
+        width: 300px !important;
+    }
+    .project-post, .test-post{
+        width: 240px !important;
+        font-size: 100%;
+    }
+}
+@media only screen and (max-width: 650px){
+    .nav-left ul li{
+        display: none;
+    }
+    .nav-right ul{
+        display: none;
+    }
+    #menu-bar{
+        display: block !important;
+    }
+    .project-post, .test-post{
+        width: 100% !important;
+        font-size: 100%;
+    }
+    .blog-head{
+        display: flex;
+        flex-direction: column;
+    }
+    .blog-title{
+        font-size: 25px !important;
+    }
+    .blog-img{
+        width: 100% !important;
+    }
+    .blog-details{
+        margin: 20px 0 0 0 !important;
+    }
+    .date-details p{
+        font-size: 16px !important;
+    }
+    .tech-details{
+        margin-top: 30px !important;
+    }
+    .tech-icons tbody tr td{
+        font-size: 16px !important;
+    }
+    .title-details{
+        font-size: 20px !important;
+    }
+}
+@media only screen and (max-width: 550px){
+    .contact-form{
+        width: 100% !important;
+        margin: 30px auto;
+    }
+    .contact-form form{
+        margin: 0 20px;
+    }
+    .project-form{
+        width: 100% !important;
+        margin: 30px auto;
+    }
+    .project-form form{
+        margin: 0 20px;
+    }
+    .test-btn-container button{
+        font-size: 12px !important;
+    }
+}
+#menu-bar{
+    display: none;
+    font-size: 20px;
+    padding: 0;
+    border-style: none;
+}
+#menu-bar:hover{
+    color: darkblue;
+}
+.menu-bar-container{
+    display: none;
+}
+.menu-bar-container ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.menu-bar-container ul li{
+    list-style-type: none;
+}
+.menu-bar-container ul li a{
+    display: block;
+    text-decoration: none;
+    background-color: dimgray;
+    color: white;
+    width: inherit;
+    border: 1px solid grey;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.menu-bar-container ul li a:hover{
+    background-color: darkblue;
+}
+.navbar {
+    background-color: #dbdbdb;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+.nav-left .logo {
+    width: 40px;
+}
+.nav-left ul {
+    display: flex;
+}
+.nav-left ul li {
+    list-style-type: none;
+    margin-right: 30px;
+}
+.nav-left ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-left ul li a:hover {
+    color: blue;
+}
+.nav-right {
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+}
+.nav-right ul li {
+    list-style-type: none;
+}
+.nav-right ul li a {
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 15px;
+}
+.nav-right ul li a:hover {
+    background-color: black;
+}
+.content {
+    display: flex;
+    margin: 50px auto;
+    max-width: 900px;
+    padding: 40px;
+    box-shadow: 0px 10px 20px grey;
+    border-radius: 10px;
+}
+.container{
+    margin-right: 40px;
+}
+.container .description{
+    text-align: justify;
+}
+.description a{
+    color: red;
+}
+.description a:hover{
+    color: blue;
+}
+.download-btn{
+    margin-top: 20px;
+}
+.container .contact-btn{
+    background-color: black;
+    padding: 5px 15px;
+    margin-right: 20px;
+    color: white;
+    border-radius: 15px;
+    font-size: 15px;
+    text-decoration: none;
+}
+.container .contact-btn:hover{
+    background-color: blue;
+}
+.container .cv {
+    color: black;
+    text-decoration: none;
+}
+.container .cv:hover{
+    color: blue;
+}
+.container .socmed {
+    margin-top: 30px;
+}
+.socmed a i{
+    font-size: 20px;
+    margin-right: 20px;
+    color: black;
+}
+.socmed a i:hover{
+    color: blue;
+}
+.photo-desc{
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 5px 10px grey;
+    border-radius: 10px;
+}
+.photo-desc img{
+    width: 300px;
+    border-radius: 10px 10px 0 0;
+}
+.photo-desc h3{
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+.photo-desc p{
+    text-align: center;
+    margin: 0;
+    font-size: 15px;
+}
+.contact-form{
+    width: 500px;
+    margin: 30px auto;
+}
+.contact-form h2{
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-form form input, select, textarea{
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 3px 5px #dbdbdb;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #dbdbdb;
+}
+.contact-form form textarea{
+    resize: none;
+    height: 100px;
+}
+.contact-form form button{
+    width: 80px;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin: auto 0px auto auto;
+    border: 0px;
+}
+.contact-form form button:hover{
+    background-color: blue;
+}
+
+/* Blog page */
+.project-form{
+    width: 500px;
+    margin: 30px auto;
+}
+.section-title{
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+.project-form form{
+    display: flex;
+    flex-direction: column;
+}
+.project-form form input, select, textarea{
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 3px 5px #dbdbdb;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #dbdbdb;
+    width: 100%;
+}
+.project-form form label{
+    margin-bottom: 5px;
+}
+.project-form form textarea{
+    resize: none;
+    height: 200px;
+}
+.project-form form .startend-date{
+    display: flex;
+}
+.project-form form .start-date-container{
+    width: 50%;
+    padding-right: 10px;
+}
+.project-form form .end-date-container{
+    width: 50%;
+}
+.project-form form .tech-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.project-form form .tech-container label{
+    color: darkslategray;
+}
+.project-form form div.tech-container div{
+    display: flex;
+    width: 100%;
+}
+.project-form form .tech-container input#html, input#css, input#javascript, input#php{
+    width: 20px;
+}
+.project-form form div.tech-container label{
+    margin-left: 10px;
+}
+.project-form form button{
+    width: 80px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: auto 0px auto auto;
+    border: 0px;
+}
+.project-form form button:hover{
+    background-color: blue;
+}
+.project{
+    background-color: #eeeeee;
+}
+.project-blog{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 1130px;
+    margin: 10px auto;
+}
+.project-post{
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 20px 20px #dbdbdb;
+    border-radius: 10px;
+}
+.project-post a{
+    text-decoration: none;
+    color: black;
+}
+.project-post a:hover{
+    color: blue;
+}
+.project-post img{
+    width: inherit;
+    border-radius: 10px;
+}
+.project-post .project-title{
+    margin: 10px 0 5px 0;
+}
+.project-post .project-duration{
+    margin: 0;
+    display: inline-block;
+}
+.project-post label, .project-duration{
+    color: dimgray;
+}
+.project-post .project-tech i{
+    font-size: 28px;
+    margin: 5px;
+    margin-top: 10px;
+}
+.project-post .action-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.project-post .action-btn input{
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    border-style: none;
+    padding: 5px 10px;
+    width: 49%;
+    font-size: 14px;
+    font-weight: bold;
+}
+.project-post .action-btn input:hover{
+    background-color: blue;
+}
+.blog-content{
+    padding: 30px;
+    width: 1000px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+.blog-title{
+    text-align: center;
+    font-size: 40px;
+}
+.blog-head{
+    width: inherit;
+    display: flex;
+    margin: 40px 0;
+}
+.blog-head .blog-img{
+    width: 55%;
+}
+.blog-head .blog-img img{
+    width: 100%;
+}
+.blog-details{
+    margin-left: 40px;
+}
+.text-details{
+    color: grey;
+}
+.blog-details .title-details{
+    font-size: 25px;
+    margin: 0;
+}
+.blog-details .date-details p{
+    font-size: 25px;
+}
+.blog-details .tech-details{
+    margin-top: 50px;
+}
+.blog-details .tech-details .tech-icons{
+    font-size: 25px;
+    width: 100%;
+}
+.blog-details .tech-details .tech-icons td{
+    padding-top: 20px;
+}
+.blog-desc{
+    text-align: justify;
+}
+
+/* Testimonial Page */
+.test-title{
+    text-align: center;
+}
+.test-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 1130px;
+    margin: 10px auto;
+}
+.test-post{
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 20px 20px #dbdbdb;
+    border-radius: 10px;
+}
+.test-post img{
+    width: inherit;
+    border-radius: 10px;
+}
+.test-post .test-title{
+    text-align: left;
+}
+.test-comment{
+    font-style: italic;
+}
+.test-name{
+    font-weight: bold;
+    text-align: right;
+}
+.test-star{
+    text-align: right;
+    margin: 0;
+}
+.test-desc{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+.test-btn-container{
+    display: flex;
+    justify-content: space-around;
+    width: 850px;
+    margin: 0 auto;
+}
+.test-btn-container button{
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: blue;
+    color: white;
+    border-style: none;
+}
+.test-btn-container button:hover{
+    background-color: black;
+}

@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Day 15 - Relation and File Upload</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="/images/logo.png" alt="cikhidayat" width="50">
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="text-center nav-link link-opacity-10-hover fw-medium active" style="" aria-current="page" href="/">Home</a>
+                  </li>
+                  {{#if isLogin}}
+                  <li class="nav-item">
+                    <a class="text-center nav-link link-opacity-10-hover" href="/add-blog">Add Blog</a>
+                  </li>
+                  {{/if}}
+                  <li class="nav-item">
+                    <a class="text-center nav-link link-opacity-10-hover" href="/contact">Contact Me</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="text-center nav-link link-opacity-10-hover" href="/testimonial">Testimonial</a>
+                  </li>
+                </ul>
+                <div class="d-flex justify-content-center m-0">
+                  {{#if isLogin}}
+                  <a class="btn btn-dark m-2" href="#">Hello, {{user}}</a>
+                  <a class="btn btn-primary m-2" href="/logout">Logout</a>
+                  {{else}}
+                  <a class="btn btn-dark m-2" href="/register">Register</a>
+                  <a class="btn btn-primary m-2" href="/login">Login</a>
+                  {{/if}}
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          {{#if messages.success}}
+          <div class="alert alert-success" role="alert">
+            {{messages.success}}
+          </div>
+          {{/if}}
+          
+          <section class="d-lg-flex flex-md-row-reverse px-4 mx-auto" style="min-height: 100%; background-image: url('https://www.colegiosantoantonio.com.br/wp-content/uploads/bfi_thumb/white-wallpaper-6-333rov3u0mcmdhx90lmz28.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
+            <div class="d-flex justify-content-center align-self-center p-5">
+              <img class="border border-dark rounded-circle" src="/images/me.png" alt="" style="max-width: 350px;">
+            </div>
+            <div class="container p-5 align-self-center">
+              <h3 class="mb-4" style="font-size: 60px;">I'm a <span class="text-primary">Fullstack Developer</span></h3>
+              <p class="mb-4 fs-4">Creator of powerfull apps, responsive web design and structured database management. Open for challenging project.</p>
+              <a href="/contact" class="btn btn-primary px-3 py-1 me-3">Contact</a>
+              <a href="" class="btn btn-outline-primary px-3 py-1">Download CV <i class="fa-solid fa-download"></i></a>
+            </div>
+          </section>
+          <section>
+            <div class="pt-3 bg-body-tertiary">
+              <h3 class="mt-5 text-center">MY PROJECT</h3>
+              <div id="project-blog" class="d-sm-flex container justify-content-around py-5 flex-wrap">
+                  {{#each myblogs}}
+                  <div class="card m-3 p-2" style="width: 18rem;">
+                  <img src="{{this.image}}" class="card-img-top" alt="Project1" style="max-height: 150px;">
+                    <div class="card-body">
+                      <a class="link-offset-2 link-underline link-underline-opacity-0" href="/blog-page/{{this.id}}"><h5 class="card-title">{{this.title}}</h5></a>
+                      <p class="my-3 text-secondary" style="font-size: 14px;"><i class="fa-solid fa-user"></i><span class="me-2"> {{this.author}}</span><i class="fa-regular fa-clock"></i><span> {{this.duration}} Month</span></p>
+                      <p class="mb-1 text-secondary fs-7"></p>
+                      <p class="card-text">{{this.description}}</p>
+                      <p class="fs-4 ">
+                        <i class="m-0 {{this.javascript}}"></i>
+                        <i class="m-0 {{this.php}}"></i>
+                        <i class="m-0 {{this.css}}"></i>
+                        <i class="m-0 {{this.html}}"></i>
+                      </p>
+                      {{#if this.isLogin}}
+                        {{#if this.author}}
+                      <div class="d-flex justify-content-between">
+                        <a href="/edit-blog/{{this.id}}" class="btn btn-primary px-4 py-1 me-2 flex-fill">Edit</a>
+                        <a href="/delete-blog/{{this.id}}" class="btn btn-primary px-4 py-1 flex-fill">Delete</a>
+                      </div>
+                        {{/if}}
+                      {{/if}}
+                    </div>
+                  </div>
+                  {{/each}}
+              </div>
+          </div>
+          </section>
+          <div>
+            <footer class="border bg-dark m-0 p-3">
+              <p class="text-light m-0 text-center">Copyright 2023</p>
+              <p class="text-light m-0 text-center">Created by Rahmat Hidayat | <a class="text-light mx-1" href="https://instagram.com/rhmthidayat07"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="text-light mx-1" href="https://www.facebook.com/rahmathidayat674"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="text-light mx-1" href="https://www.linkedin.com/in/rhidayat1407/"><i class="fa-brands fa-linkedin-in"></i></i></a>
+                    <a class="text-light mx-1" href="https://twitter.com/rhmthidayat07"><i class="fa-brands fa-twitter"></i></a></p>
+            </footer>
+          </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="/js/script.js"></script>
+        <script src="/js/button.js"></script>
+    </body>
+</html>
